@@ -4,15 +4,52 @@
     no License at all
 -->
 
+<!--
+
+    TODO: redo this in Bootstrap!
+    this is currently using Tachyons CSS library...
+
+    refactor all this into Bootstrap
+
+-->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Fading Image Meme Generator
+    </title>
+      <link href="styles.css" rel="stylesheet" type="text/css" />
+      <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/tachyons/3.0.2/tachyons.css" />
+      <!-- FIXME: refactor to bootstrap -->
+      <script src="scripts.js"></script>
 </head>
 <body>
+<div class="h-100 sans-serif cf">
+    <div class="w-25 ptl phm fl h-100 bg-dark-gray white">
+        <h4>Select both images</h4>
+        <div class="fl mbl db tl">
+            <label class="db mbs tl w-50">Image 1</label>
+            <input type="file" class="tl" id="image1" />
+        </div>
+        <div class="fl db tr">
+            <label class="db mbs tl w-75">Image 2</label>
+            <input type="file" class="tr" id="image2" />
+        </div>
 
+        <button id="switch-button" class="w-100 white mtm br2 bn bg-blue pvm">Switch Images</button>
+        <!--<a target="_blank" id="download-button" class="cp link db tc w-100 white mtm br2 bn bg-teal pvm">Download Image</a>-->
+
+        <div class="made=by">
+            Made by <a href="https://bryansnyder.dev" class="white link heavy">Bryan Snyder</a>
+        </div>
+    </div>
+
+    <div class="fl tc w-75 ptl sans-serif center">
+        <canvas id="canvas" class="ba tc center canvas" width="600" height="600"></canvas>
+    </div>
+</div>
 </body>
 </html>
